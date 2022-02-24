@@ -4,7 +4,7 @@ const isServerSide = typeof window === 'undefined';
 const ssrCache = ssrExchange({ isClient: !isServerSide });
 
 const client = createClient({
-  url: 'http://62.171.140.208:3000/graphql',
+  url: process.env.API_URL as string,
   exchanges: [dedupExchange, cacheExchange, ssrCache, fetchExchange],
 })
 
