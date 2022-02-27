@@ -2,9 +2,11 @@
   "name": "codegen-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "dev": "tsc -w",
+    "build": "tsc",
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "author": "",
